@@ -2,11 +2,8 @@ package com.saenz.terapeuta
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.saenz.terapeuta.MyAdapter
-import com.saenz.terapeuta.Supplier
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -19,7 +16,7 @@ class MainActivity : AppCompatActivity() {
 
         viewlayoutManager = LinearLayoutManager(this)
 
-        rvadapter = MyAdapter(Supplier.pacientes)
+        rvadapter = PacienteAdapter(Supplier.pacientes)
 
 
 

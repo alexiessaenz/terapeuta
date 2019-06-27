@@ -1,25 +1,19 @@
 package com.saenz.terapeuta
 
-import android.content.Context
 import android.content.Intent
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.list_items.view.*
-import android.content.res.Resources
-import android.util.Log
-
-import com.saenz.terapeuta.Paciente
 
 //import com.saenz.terapeuta.R
 
-class MyAdapter(private val myDataset: List<Paciente>) :  RecyclerView.Adapter<MyAdapter.MyViewHolder>() {
+class PacienteAdapter(private val myDataset: List<Paciente>) :  RecyclerView.Adapter<PacienteAdapter.MyViewHolder>() {
 
     // Create new views (invoked by the layout manager)
     override fun onCreateViewHolder(parent: ViewGroup,
-                                    viewType: Int): MyAdapter.MyViewHolder {
+                                    viewType: Int): PacienteAdapter.MyViewHolder {
         // create a new view
        // val view = LayoutInflater.from(parent.context).inflate(R.layout.list_items, parent, false)
         val view = LayoutInflater.from(parent.context).inflate(R.layout.list_items,parent,false)
@@ -51,7 +45,7 @@ class MyAdapter(private val myDataset: List<Paciente>) :  RecyclerView.Adapter<M
                 var edad:String=pacientes.edad
                 var direccion:String=pacientes.direccion
 
-                val intent:Intent = Intent( itemView.context,Datos::class.java)
+                val intent:Intent = Intent( itemView.context,Expediente::class.java)
                 intent.putExtra("Nombre",nombre)
                 intent.putExtra("Apellido",apellido)
                 intent.putExtra("Edad",edad)
